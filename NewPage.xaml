@@ -1,0 +1,27 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aplikacjatress.NewPage">
+
+    <StackLayout>
+        <Label Text="Select Minimum Age:"/>
+        <Picker x:Name="agePicker" SelectedIndexChanged="OnAgePickerSelectedIndexChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:Int32}">
+                    <x:Int32>0</x:Int32>
+                    <x:Int32>10</x:Int32>
+                    <x:Int32>20</x:Int32>
+                    <x:Int32>30</x:Int32>
+                    <x:Int32>40</x:Int32>
+                    <x:Int32>50</x:Int32>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <ListView x:Name="contactsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Age}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

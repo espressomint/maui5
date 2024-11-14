@@ -29,6 +29,10 @@
         {
            Navigation.PushAsync(new ShowContact());
         }
+        private async void FilterContactsByAgeButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NewPage());
+        }
 
     }
 
