@@ -3,7 +3,7 @@
     public partial class MainPage : ContentPage
     {
         //private ContactList contactList;
-
+        private int nextId = 1;
         public MainPage()
         {
             InitializeComponent();
@@ -14,6 +14,7 @@
         {
             var contact = new Contact
             {
+                ID = nextId++,
                 Name = nameEntry.Text,
                 Age = int.Parse(ageEntry.Text),
                 Description = descriptionEntry.Text
@@ -27,7 +28,7 @@
 
         private void ShowContactsButtonClicked(object sender, EventArgs e)
         {
-           Navigation.PushAsync(new ShowContact());
+            Navigation.PushAsync(new ShowContact());
         }
         private async void FilterContactsByAgeButtonClicked(object sender, EventArgs e)
         {

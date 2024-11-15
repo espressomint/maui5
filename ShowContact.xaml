@@ -4,37 +4,43 @@
              x:Class="aplikacjatress.ShowContact"
              Title="ShowContact">
     <StackLayout>
-        <ListView x:Name="contactsListView">
+        <ListView x:Name="contactsListView"
+                  ItemSelected="OnContactSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Grid Padding="10">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0"
+                                   Text="{Binding ID}"
+                                   FontAttributes="Bold" />
                             <Label Grid.Column="1"
                                    Text="{Binding Name}"
-                                   FontAttributes="Bold"/>
+                                   FontAttributes="Bold" />
                             <Label Grid.Row="1"
                                    Grid.Column="1"
                                    Text="{Binding Description}"
                                    FontAttributes="Italic"
-                                   VerticalOptions="End"/>
+                                   VerticalOptions="End" />
                             <Label Grid.Row="1"
                                    Grid.Column="2"
                                    Text="{Binding Age}"
-                                   FontAttributes="Italic"/>
+                                   FontAttributes="Italic" />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Label x:Name="descriptionLabel"
+               FontAttributes="Italic" />
     </StackLayout>
 </ContentPage>

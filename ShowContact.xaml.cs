@@ -1,4 +1,4 @@
-namespace aplikacjatress
+﻿namespace aplikacjatress
 {
     public partial class ShowContact : ContentPage
     {
@@ -6,6 +6,16 @@ namespace aplikacjatress
         {
             InitializeComponent();
             contactsListView.ItemsSource = ContactList.Contacts;
+            contactsListView.ItemSelected += OnContactSelected;  // Dodanie obsługi zdarzenia
+        }
+
+        private void OnContactSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var selectedContact = e.SelectedItem as Contact;
+            if (selectedContact != null)
+            {
+                descriptionLabel.Text = selectedContact.Description;
+            }
         }
     }
 }

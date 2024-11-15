@@ -11,9 +11,9 @@ namespace aplikacjatress
     {
         public static ObservableCollection<Contact> Contacts = new ObservableCollection<Contact>();
 
-        public static IEnumerable<Contact> GetContactsOlderThan(int age) 
-        { 
-            return Contacts.Where(contact => contact.Age > age); 
+        public static IEnumerable<Contact> GetContactsOlderThan(int age)
+        {
+            return Contacts.Where(contact => contact.Age > age);
         }
     }
 }

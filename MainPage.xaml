@@ -5,12 +5,19 @@
 
     <ScrollView>
         <StackLayout>
-            <Entry x:Name="nameEntry" Placeholder="Name"/>
-            <Entry x:Name="ageEntry" Placeholder="Age"/>
-            <Entry x:Name="descriptionEntry" Placeholder="Description"/>
-            <Button Text="Add Contact" Clicked="ContactButtonClicked"/>
-            <Button Text="Show Contacts" x:Name="showContacts" Clicked="ShowContactsButtonClicked"/>
-            <Button Text="Filter Contacts By Age" Clicked="FilterContactsByAgeButtonClicked"/>
+            <Entry x:Name="nameEntry"
+                   Placeholder="Name" />
+            <Entry x:Name="ageEntry"
+                   Placeholder="Age" />
+            <Entry x:Name="descriptionEntry"
+                   Placeholder="Description" />
+            <Button Text="Add Contact"
+                    Clicked="ContactButtonClicked" />
+            <Button Text="Show Contacts"
+                    x:Name="showContacts"
+                    Clicked="ShowContactsButtonClicked" />
+            <Button Text="Filter Contacts By Age"
+                    Clicked="FilterContactsByAgeButtonClicked" />
         </StackLayout>
     </ScrollView>
 

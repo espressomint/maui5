@@ -3,8 +3,9 @@
              x:Class="aplikacjatress.NewPage">
 
     <StackLayout>
-        <Label Text="Select Minimum Age:"/>
-        <Picker x:Name="agePicker" SelectedIndexChanged="OnAgePickerSelectedIndexChanged">
+        <Label Text="Select Minimum Age:" />
+        <Picker x:Name="agePicker"
+                SelectedIndexChanged="OnAgePickerSelectedIndexChanged">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:Int32}">
                     <x:Int32>0</x:Int32>
@@ -19,7 +20,8 @@
         <ListView x:Name="contactsListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}" Detail="{Binding Age}" />
+                    <TextCell Text="{Binding Name}"
+                              Detail="{Binding Age}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
