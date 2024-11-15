@@ -12,7 +12,7 @@ namespace aplikacjatress
             InitializeComponent();
         }
 
-        private void OnAgePickerSelectedIndexChanged(object sender, EventArgs e)
+        private void OnAgePickerSelected(object sender, EventArgs e)
         {
             if (agePicker.SelectedItem != null)
             {

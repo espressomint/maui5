@@ -17,7 +17,7 @@
                     x:Name="showContacts"
                     Clicked="ShowContactsButtonClicked" />
             <Button Text="Filter Contacts By Age"
-                    Clicked="FilterContactsByAgeButtonClicked" />
+                    Clicked="FilterContacts" />
         </StackLayout>
     </ScrollView>
 

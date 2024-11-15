@@ -3,7 +3,7 @@
     public partial class MainPage : ContentPage
     {
         //private ContactList contactList;
-        private int nextId = 1;
+        public int nextId = 1;
         public MainPage()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@
         {
             Navigation.PushAsync(new ShowContact());
         }
-        private async void FilterContactsByAgeButtonClicked(object sender, EventArgs e)
+        private async void FilterContacts(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new NewPage());
         }
